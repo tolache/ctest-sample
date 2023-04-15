@@ -8,7 +8,7 @@ mkdir build
 cd build
 cmake ..
 cmake --build .
-ctest -VV
+ctest -T test -VV --output-on-failure
 ```
 
 Example of a Docker image with a suitable build environment: `isotropicmike/cmake_cpp_build_environment:0.8`
