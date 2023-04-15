@@ -1,24 +1,20 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.0)
 
-project(MyProject)
+project(test_project)
 
-# Include CTest module
-include(CTest)
+set(CMAKE_CXX_STANDARD 11)
 
-# Build the main executable
-add_executable(main main.cpp)
+enable_testing()
 
-# Build the test executable
 add_executable(tests test.cpp)
 
-# Link the main executable to any necessary libraries
-target_link_libraries(main PUBLIC)
-
-# Configure CTest
-enable_testing()
 add_test(NAME Test1 COMMAND tests 1)
 add_test(NAME Test2 COMMAND tests 2)
+
 set_tests_properties(Test1 Test2 PROPERTIES TIMEOUT 10)
-set(CTEST_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Testing/")
-set_property(TARGET tests PROPERTY CTEST_OUTPUT_ON_FAILURE ON)
-set_property(TARGET tests PROPERTY CTEST_GENERATE_XML ON)
+
+if (WIN32)
+    set(CTEST_CUSTOM_POST_TEST "echo custom command")
+else()
+    set(CTEST_CUSTOM_POST_TEST "echo custom command")
+endif()
