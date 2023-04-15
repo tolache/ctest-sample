@@ -1,7 +1,7 @@
 # CTest Sample
 A simple C++ project for CMake and CTest demo purposes
 
-# How To Build
+## How To Build
 
 ```shell
 mkdir build
