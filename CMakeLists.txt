@@ -17,7 +17,11 @@ target_link_libraries(main PUBLIC)
 # Configure CTest
 enable_testing()
 add_test(NAME MyTests COMMAND tests)
+set_tests_properties(MyTests PROPERTIES TIMEOUT 10)
 set(CTEST_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/xml)
+
+# Create XML output directory
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/xml)
 
 # Generate CTest XML report
 set_property(TARGET tests PROPERTY CTEST_OUTPUT_ON_FAILURE ON)
