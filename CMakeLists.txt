@@ -1,22 +1,20 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
 
-project(test_project)
+project(MyProject)
 
-set(CMAKE_CXX_STANDARD 11)
+# Build the main executable
+add_executable(main main.cpp)
 
-enable_testing()
-
+# Build the test executable
 add_executable(tests test.cpp)
 
-add_test(NAME Test1 COMMAND tests 1)
-add_test(NAME Test2 COMMAND tests 2)
+# Link the main executable to any necessary libraries
+target_link_libraries(main PUBLIC)
 
-set_tests_properties(Test1 Test2 PROPERTIES TIMEOUT 10)
+# Configure CTest
+enable_testing()
+add_test(NAME MyTests COMMAND tests)
 
-if (WIN32)
-    set(CTEST_CUSTOM_POST_TEST "echo custom command")
-else()
-    set(CTEST_CUSTOM_POST_TEST "echo custom command")
-endif()
-
-add_custom_target(tests COMMAND ${CMAKE_CTEST_COMMAND} -T Test)
+# Generate CTest XML report
+set_property(TARGET tests PROPERTY CTEST_OUTPUT_ON_FAILURE ON)
+set_property(TARGET tests PROPERTY CTEST_GENERATE_XML ON)
