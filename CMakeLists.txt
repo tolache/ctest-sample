@@ -18,3 +18,5 @@ if (WIN32)
 else()
     set(CTEST_CUSTOM_POST_TEST "echo custom command")
 endif()
+
+add_custom_target(tests COMMAND ${CMAKE_CTEST_COMMAND} -T Test)
