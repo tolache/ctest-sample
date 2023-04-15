@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(MyProject)
 
+include(CTest)
+
 # Build the main executable
 add_executable(main main.cpp)
 
