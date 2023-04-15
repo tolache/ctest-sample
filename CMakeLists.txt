@@ -18,7 +18,7 @@ target_link_libraries(main PUBLIC)
 enable_testing()
 add_test(NAME MyTests COMMAND tests)
 set_tests_properties(MyTests PROPERTIES TIMEOUT 10)
-set(CTEST_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/xml)
+set(CTEST_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Testing/")
 
 # Create XML output directory
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/xml)
