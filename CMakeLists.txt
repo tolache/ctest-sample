@@ -8,7 +8,7 @@ include(CTest)
 add_executable(main main.cpp)
 
 # Build the test executable
-add_executable(tests test.cpp)
+add_executable(tests test1.cpp test2.cpp)
 
 # Link the main executable to any necessary libraries
 target_link_libraries(main PUBLIC)
