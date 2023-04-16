@@ -34,17 +34,17 @@ Test 3 output line 2.
 Test 3 output line 3.
 )"""";
 
-    std::cout << test1Message << std::endl;
+    std::cout << test3Message << std::endl;
 
     // Test 4
-    int a = 5, b = 7;
-    assert(a + b == 12);
+    int c = 5, d = 7;
+    assert(c + d == 12);
 
     const char *test4Message = R""""(
 Test 4 output line 1.
 )"""";
 
-    std::cout << test2Message << std::endl;
+    std::cout << test4Message << std::endl;
 
     return 0;
 }
