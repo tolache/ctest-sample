@@ -1,22 +1,6 @@
 #include <iostream>
 #include <cassert>
 
-void test_case_1();
-void test_case_2();
-void test_case_3();
-void test_case_4();
-
-int main() {
-    std::cout << "Running tests 1..." << std::endl;
-
-    test_case_1();
-    test_case_2();
-    test_case_3();
-    test_case_4();
-
-    return 0;
-}
-
 void test_case_1() {
     assert(true);
 
@@ -57,4 +41,15 @@ void test_case_4() {
     const char *test4Message = "Test 4 output line 1.";
 
     std::cout << test4Message << std::endl;
+}
+
+int main() {
+    std::cout << "Running tests 1..." << std::endl;
+
+    test_case_1();
+    test_case_2();
+    test_case_3();
+    test_case_4();
+
+    return 0;
 }
