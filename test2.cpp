@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cassert>
 
-void test_case_5() {
+void test_case_2() {
     int a = 5, b = 7;
     assert(a + b == 12);
 
@@ -13,7 +13,7 @@ void test_case_5() {
 int main() {
     std::cout << "Running tests 2..." << std::endl;
 
-    test_case_5();
+    test_case_2();
 
     return 0;
 }
