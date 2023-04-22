@@ -2,9 +2,7 @@
 #include <cassert>
 
 void test_case_3() {
-    assert(false);
-
-    const char *test1Message = R""""(
+    const char *test3Message = R""""(
 libc++abi.dylib: terminating with uncaught exception of type std::out_of_range: vector
 Abort trap: 6
 Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
@@ -34,7 +32,8 @@ Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
 23  libdyld.dylib                 	0x00007fff6d832015 start +
 )"""";
 
-    std::cout << test1Message << std::endl;
+    std::cout << test3Message << std::endl;
+    assert(false);
 }
 
 int main() {
