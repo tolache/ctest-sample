@@ -20,5 +20,7 @@ add_test(NAME MyTests1 COMMAND tests1)
 add_test(NAME MyTests2 COMMAND tests2)
 
 # Generate CTest XML report
-set_property(TARGET tests PROPERTY CTEST_OUTPUT_ON_FAILURE ON)
-set_property(TARGET tests PROPERTY CTEST_GENERATE_XML ON)
+set_property(TARGET tests1 PROPERTY CTEST_OUTPUT_ON_FAILURE ON)
+set_property(TARGET tests1 PROPERTY CTEST_GENERATE_XML ON)
+set_property(TARGET tests2 PROPERTY CTEST_OUTPUT_ON_FAILURE ON)
+set_property(TARGET tests2 PROPERTY CTEST_GENERATE_XML ON)
