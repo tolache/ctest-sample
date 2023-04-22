@@ -37,7 +37,7 @@ Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
 }
 
 int main() {
-    std::cout << "Running tests 1..." << std::endl;
+    std::cout << "Running tests 3..." << std::endl;
 
     test_case_3();
 
