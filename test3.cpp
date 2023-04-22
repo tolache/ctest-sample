@@ -5,8 +5,9 @@ void test_case_3() {
     int expected = 5;
     int actual = 3;
     if (expected != actual) {
-        std::cerr << "Error: Expected " << expected << ", but got " << actual << "\n"
-                  << "Test failed in file " << __FILE__ << " at line " << __LINE__ << "\n";
+        std::cerr << "Error: Expected " << expected << ", but got " << actual << std::endl
+                  << "Test failed in file " << __FILE__ << std::endl
+                  << " at line " << __LINE__ << std::endl;
         std::exit(1);
     }
 }
