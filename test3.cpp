@@ -32,8 +32,8 @@ Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
 23  libdyld.dylib                 	0x00007fff6d832015 start +
 )"""";
 
-    std::cout << test3Message << std::endl;
-    assert(false);
+//    std::cout << test3Message << std::endl;
+    assert(false && test3Message);
 }
 
 int main() {
